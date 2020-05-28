@@ -10,7 +10,6 @@ export default new Vuex.Store({
   mutations: {
     setPrimary(state,num){
       state.primary = num
-      console.log(state,num)
     }
   },
   actions: {
