@@ -13,7 +13,7 @@
     </div>
     <div class="doing">
       <h3>最新活动</h3>
-      <router-link class="btn" to="/Understand">全部活动</router-link>
+      <router-link class="btn" to="/WhyYouChoose">全部活动</router-link>
       <div class="ul">
         <div class="li" v-for="item in doingList" :key="item.id" @click="jump(item.id)">
           <div>

@@ -3,21 +3,29 @@
     <img class="logo" src="../images/LOGO.png" alt="logo" />
     <ul class="nav" id="ula" ref="ula">
       <a @click="presentClick('home')" to="/">首页</a>
-      <a @click="presentClick('Introduction')" to="/Introduction">集团介绍</a>
+      <a @mouseenter="enter(2)" 
+      @mouseleave="leave(2)"  to="/Introduction">集团介绍
+        <ul id="ula2Nav" >
+          <li :class="{primary : Introduction===1}" 
+          @click="setIntroduction(1);presentClick('Introduction')">集团起源</li>
+          <li :class="{primary : Introduction===2}" 
+          @click="setIntroduction(2);presentClick('WhyYouChoose')">集团资讯</li>
+        </ul>
+      </a>
       <a @click="presentClick('Understand')" to="/Understand">为什么选择ROCKFOTRT？</a>
       <a @click="presentClick('Supervision')" to="/Supervision">监管与安全</a>
       <a @click="presentClick('produck');" 
-      @mouseenter="enter()" 
-      @mouseleave="leave()" to="/produck">公司产品
-       <ul id="ula4Nav" >
-        <li :class="{primary : primary===1}" @click="setPrimary(1)">差价合约文案</li>
-        <li :class="{primary : primary===2}" @click="setPrimary(2)">差价合约的交易机智文案</li>
-        <li :class="{primary : primary===3}" @click="setPrimary(3)">股票差价合约文案</li>
-        <li :class="{primary : primary===4}" @click="setPrimary(4)">股指差价合约</li>
-        <li :class="{primary : primary===5}" @click="setPrimary(5)">外汇保证金合约文案</li>
-        <li :class="{primary : primary===6}" @click="setPrimary(6)">原油差价合约文案</li>
-        <li :class="{primary : primary===7}" @click="setPrimary(7)">贵金属差价合约文案</li>
-      </ul>
+      @mouseenter="enter(4)" 
+      @mouseleave="leave(4)" to="/produck">公司产品
+        <ul id="ula4Nav" >
+          <li :class="{primary : primary===1}" @click="setPrimary(1)">差价合约文案</li>
+          <li :class="{primary : primary===2}" @click="setPrimary(2)">差价合约的交易机智文案</li>
+          <li :class="{primary : primary===3}" @click="setPrimary(3)">股票差价合约文案</li>
+          <li :class="{primary : primary===4}" @click="setPrimary(4)">股指差价合约</li>
+          <li :class="{primary : primary===5}" @click="setPrimary(5)">外汇保证金合约文案</li>
+          <li :class="{primary : primary===6}" @click="setPrimary(6)">原油差价合约文案</li>
+          <li :class="{primary : primary===7}" @click="setPrimary(7)">贵金属差价合约文案</li>
+        </ul>
       </a>
       <a @click="presentClick('SoftwareDownload')" to="/SoftwareDownload">交易软件</a>
       <div id="bottomBorder" :style="{'left':offsetLeft,'top':offsetTop}"></div>
@@ -66,7 +74,7 @@
       width: 2rem;
       background: #fff;
     }
-    #ula4Nav{
+    #ula4Nav,#ula2Nav{
       cursor: pointer;
       color: #fff;
       position: absolute;
@@ -100,6 +108,7 @@ export default {
       botBor :0,
       path:'',
       primary:1,
+      Introduction:1,
       navShow:false
       // ula4:this.$refs.ula.children[4]
     };
@@ -111,6 +120,9 @@ export default {
           this.offsetLeft = this.$refs.ula.children[0].offsetLeft+((this.$refs.ula.children[0].offsetWidth-this.botBor)/2) + "px";
           break;
         case "Introduction":
+          this.offsetLeft = this.$refs.ula.children[1].offsetLeft +((this.$refs.ula.children[1].offsetWidth-this.botBor)/2)+ "px";
+          break;
+        case "WhyYouChoose":
           this.offsetLeft = this.$refs.ula.children[1].offsetLeft +((this.$refs.ula.children[1].offsetWidth-this.botBor)/2)+ "px";
           break;
         case "Understand":
@@ -153,22 +165,36 @@ export default {
         this.$router.push({ path: "/" + str });
       }
     },
-    enter(){
-      this.navShow = true
-      let ula4 = this.$refs.ula.children[4]
-      let nav = document.getElementById('ula4Nav')
+    enter(num){
+      let ula = {};
+      let nav = {};
+      if(num===4){
+        ula = this.$refs.ula.children[4]
+        nav = document.getElementById('ula4Nav')
+      }else{
+        ula = this.$refs.ula.children[1]
+        nav = document.getElementById('ula2Nav')
+      } 
       nav.style.display='block'
-      nav.style.top = ula4.offsetHeight+ula4.offsetTop + "px";
-      nav.style.left=(ula4.offsetLeft+ula4.offsetWidth/2)-nav.offsetWidth/2+'px'
+      nav.style.top = ula.offsetHeight+ula.offsetTop + "px";
+      nav.style.left=(ula.offsetLeft+ula.offsetWidth/2)-nav.offsetWidth/2+'px'
     },
-    leave(){
-      let nav = document.getElementById('ula4Nav')
-      this.navShow=false
+    leave(num){
+      let nav = {};
+      if(num===4){
+        nav = document.getElementById('ula4Nav')
+      }else{
+        nav = document.getElementById('ula2Nav')
+      } 
       nav.style.display='none'
     },
     setPrimary(num){
       this.primary = num
       this.$store.commit('setPrimary',num)
+    },
+    setIntroduction(num){
+      this.Introduction = num
+      this.$store.commit('setIntroduction',num)
     }
   }
 };

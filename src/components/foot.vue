@@ -8,10 +8,10 @@
       <h3>快速导航</h3>
       <router-link to="/">首页</router-link>
       <router-link to="/Introduction">集团介绍</router-link>
-      <router-link to="/">集团构成</router-link>
-      <router-link to="/WhyYouChoose">为什么选择ROCKFOTRT？</router-link>
-      <router-link to="/SoftwareDownload">MT4软件下载</router-link>
-      <router-link to="/Supervision">监管信息</router-link>
+      <router-link to="/Understand">为什么选择ROCKFOTRT？</router-link>
+      <router-link to="/Supervision">监管与安全</router-link>
+      <router-link to="/produck">公司产品</router-link>
+      <router-link to="/SoftwareDownload">交易软件</router-link>
     </ul>
     <div class="record">
       <h3>京ICP备15047750号-1</h3>
