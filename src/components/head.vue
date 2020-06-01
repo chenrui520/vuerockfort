@@ -7,7 +7,7 @@
       @mouseleave="leave(2)"  to="/Introduction">集团介绍
         <ul id="ula2Nav" >
           <li :class="{primary : Introduction===1}" 
-          @click="setIntroduction(1);presentClick('Introduction')">集团起源</li>
+          @click="setIntroduction(1);presentClick('Introduction')">Rockfort集团起源</li>
           <li :class="{primary : Introduction===2}" 
           @click="setIntroduction(2);presentClick('WhyYouChoose')">集团资讯</li>
         </ul>
@@ -18,13 +18,13 @@
       @mouseenter="enter(4)" 
       @mouseleave="leave(4)" to="/produck">公司产品
         <ul id="ula4Nav" >
-          <li :class="{primary : primary===1}" @click="setPrimary(1)">差价合约文案</li>
-          <li :class="{primary : primary===2}" @click="setPrimary(2)">差价合约的交易机智文案</li>
-          <li :class="{primary : primary===3}" @click="setPrimary(3)">股票差价合约文案</li>
+          <li :class="{primary : primary===1}" @click="setPrimary(1)">差价合约</li>
+          <li :class="{primary : primary===2}" @click="setPrimary(2)">差价合约的交易机制</li>
+          <li :class="{primary : primary===3}" @click="setPrimary(3)">股票差价合约</li>
           <li :class="{primary : primary===4}" @click="setPrimary(4)">股指差价合约</li>
-          <li :class="{primary : primary===5}" @click="setPrimary(5)">外汇保证金合约文案</li>
-          <li :class="{primary : primary===6}" @click="setPrimary(6)">原油差价合约文案</li>
-          <li :class="{primary : primary===7}" @click="setPrimary(7)">贵金属差价合约文案</li>
+          <li :class="{primary : primary===5}" @click="setPrimary(5)">外汇保证金合约</li>
+          <li :class="{primary : primary===6}" @click="setPrimary(6)">原油差价合约</li>
+          <li :class="{primary : primary===7}" @click="setPrimary(7)">贵金属差价合约</li>
         </ul>
       </a>
       <a @click="presentClick('SoftwareDownload')" to="/SoftwareDownload">交易软件</a>
@@ -58,7 +58,8 @@
   }
   .nav {
     width: 53.44%;
-    height: 29px;
+    height: 4.761rem;
+    line-height: 4.761rem;
     padding: 0px;
     display: flex;
     justify-content: space-between;
@@ -78,11 +79,9 @@
       cursor: pointer;
       color: #fff;
       position: absolute;
-      width: 18rem;
       background:rgba($color: #000000, $alpha: 0.5);
       font-size: 1rem;
-      padding-top: 2rem;
-      padding-bottom: 0.54rem;
+      padding: 0.54rem 2rem;
       text-align: center;
       display: none;
       li{
@@ -152,7 +151,7 @@ export default {
     let that= this
     setTimeout(function(){
        that.offsetLeft = that.$refs.ula.children[0].offsetLeft + "px";
-    that.offsetTop = document.getElementById("header").offsetHeight-3 + "px";
+    that.offsetTop = document.getElementById("header").offsetHeight + "px";
     that.botBor=document.getElementById("bottomBorder").offsetWidth
     },200)
   },

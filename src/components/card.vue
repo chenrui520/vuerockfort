@@ -35,7 +35,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
 .card {
-  width:48.88rem;
+  width:68.88rem;
   line-height: 0;
   img {
     width: 100%;

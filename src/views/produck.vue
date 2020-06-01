@@ -32,7 +32,7 @@
           <br />* 买入价：新建多头差价合约的价格，或结算空头差价合约的价格
           <br />* 卖出价：新建空头差价合约的价格，或结算多头价差合约的价格
         </p>
-        <div class="title">差价合约额佣金</div>
+        <div class="title">差价合约(CFD)交易与传统交易相比具备众多优势</div>
         <p
           class="content"
         >通常情况下，Rockfort提供的差价合约的交易成本是点差，但是如果交易的合约是直接进入市场的情况下，Rockfort会收取基于建立交易总额的佣金。例如在Rockfort交易ECN账户类型的差价合约，由于交易点差为从0开始，投资者交易通过直接访问银行同业流动性交易体系中直接成交，此时投资者的交易成本除了ECN点差外，还有佣金。</p>
@@ -249,6 +249,7 @@ $borColor: rgba(255, 255, 255, 0.1);
         font-size: 1.14rem;
         border-radius: 2rem;
         padding: 2px 0.5rem;
+        padding-top: 0;
         background: #4f565f;
         margin-bottom: 1.72rem;
         display: inline-block;

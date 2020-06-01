@@ -83,6 +83,7 @@ $borColor: rgba(255, 255, 255, 0.1);
         height: 9.685rem;
         position: relative;
         text-align: left;
+        margin-left: 2rem;
         h3 {
           font-size: 1.291rem;
         }

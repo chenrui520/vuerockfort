@@ -6,9 +6,13 @@
     </div>
     <div class="contP">
       <div class="p">
+        <p style="text-indent:2em">
         Rockfort集团在全球设有不同办事处，专业优秀的团队对投资者的行业领域提供专业的指导和服务。现投资者遍布全球60多个国家和地区。
-        <br />Rockfort投资人携创始人团队，在投资场景、资产组合/运作、金融衍生品领域全面合作，全力打造稳固、开放、共赢行业科技金融生态，为全球投资者创建一个平等的、优惠的、便捷的金融衍生品交易环境和体系。
-        <div class="btn">查看更多</div>
+        </p>
+        <p style="text-indent:2em">
+        Rockfort投资人携创始人团队，在投资场景、资产组合/运作、金融衍生品领域全面合作，全力打造稳固、开放、共赢行业科技金融生态，为全球投资者创建一个平等的、优惠的、便捷的金融衍生品交易环境和体系。
+        </p>
+        <router-link to="/Introduction" class="btn">查看更多</router-link >
       </div>
     </div>
     <div class="doing">
@@ -19,7 +23,7 @@
           <div>
             <img :src="item.thumbnail" alt="图片" />
           </div>
-          <div class="text" v-html="item.excerpt"></div>
+          <div class="text" v-html="item.title"></div>
         </div>
       </div>
     </div>
@@ -298,6 +302,7 @@ export default {
       },
       error: function() {} // 请求失败的回调函数
     });
+
   },
   methods: {
     jump(id) {
@@ -365,6 +370,7 @@ export default {
       .btn {
         right: 0;
         bottom: 0;
+        text-decoration: none;
       }
     }
   }
