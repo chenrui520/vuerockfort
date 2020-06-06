@@ -1,18 +1,18 @@
 <template>
-  <div class="home">
+  <div v-if="Switch" class="home">
     <div class="headerImg">
       <h3>新西兰监管 · 国际金融公司</h3>
       <h4>Rockfort</h4>
     </div>
     <div class="contP">
       <div class="p">
-        <p style="text-indent:2em">
-        Rockfort集团在全球设有不同办事处，专业优秀的团队对投资者的行业领域提供专业的指导和服务。现投资者遍布全球60多个国家和地区。
-        </p>
-        <p style="text-indent:2em">
-        Rockfort投资人携创始人团队，在投资场景、资产组合/运作、金融衍生品领域全面合作，全力打造稳固、开放、共赢行业科技金融生态，为全球投资者创建一个平等的、优惠的、便捷的金融衍生品交易环境和体系。
-        </p>
-        <router-link to="/Introduction" class="btn">查看更多</router-link >
+        <p
+          style="text-indent:2em"
+        >Rockfort集团在全球设有不同办事处，专业优秀的团队对投资者的行业领域提供专业的指导和服务。现投资者遍布全球60多个国家和地区。</p>
+        <p
+          style="text-indent:2em"
+        >Rockfort投资人携创始人团队，在投资场景、资产组合/运作、金融衍生品领域全面合作，全力打造稳固、开放、共赢行业科技金融生态，为全球投资者创建一个平等的、优惠的、便捷的金融衍生品交易环境和体系。</p>
+        <router-link to="/Introduction" class="btn">查看更多</router-link>
       </div>
     </div>
     <div class="doing">
@@ -260,6 +260,267 @@
       </div>
     </div>
   </div>
+  <div v-else class="home">
+    <div class="headerImg">
+      <h3>New Zealand Regulation</h3>
+      <h4>Rockfort</h4>
+    </div>
+    <div class="contP">
+      <div class="p">
+        <p
+          style="text-indent:2em"
+        >Rockfort Group has different offices around the world, and professional and excellent teams provide professional guidance and services to investors in the industry. Investors are now present in more than 60 countries and regions around the world.</p>
+        <p
+          style="text-indent:2em"
+        >Rockfort investors and the founder team cooperate fully in the fields of investment scenarios, asset portfolio/operations, and financial derivatives, and strive to create a stable, open, and win-win industry technology and financial ecology, creating an equal, preferential, and convenient for global investors. The financial derivatives trading environment and system.</p>
+        <router-link to="/Introduction" class="btn">see more</router-link>
+      </div>
+    </div>
+    <div class="doing">
+      <h3>latest events</h3>
+      <router-link class="btn" to="/WhyYouChoose">All activities</router-link>
+      <div class="ul">
+        <div class="li" v-for="item in doingList" :key="item.id" @click="jump(item.id)">
+          <div>
+            <img :src="item.thumbnail" alt="图片" />
+          </div>
+          <div class="text" v-html="item.title"></div>
+        </div>
+      </div>
+    </div>
+    <div class="constitute">
+      <div class="constituteBg">
+        <h3>Group composition</h3>
+        <h4>ROCKFORT International Group</h4>
+      </div>
+      <div class="constituteList">
+        <div class="li">
+          <img src="../images/banner.png" alt="旗帜" />
+          <h3>ROCKFORT HOLDINGS LIMITED</h3>
+          <p>Is a limited liability company located in Level 21 191 Queen Street, Auckland, New Zealand (Business registration number: NZBN 9429047702585)</p>
+        </div>
+        <div class="li two">
+          <img src="../images/bannerTwo.png" alt="旗帜" />
+          <h3>ROCKFORT MARKETS LIMITED</h3>
+          <p>
+            Is a limited liability company located in Level 21 191 Queen Street, Auckland, New Zealand (Business Registration Number: NZBN 9429042010807)
+            <br />Is an FMA-regulated main financial derivatives service company (regulation number FSP509766)
+          </p>
+        </div>
+        <div class="li three">
+          <img src="../images/bannerThree.png" alt="旗帜" />
+          <h3>
+            ROCKFORT INTERNATIONAL
+            <br />（Seychelles） LIMITED
+          </h3>
+          <p>Is a limited liability company located in Suite 23, 1st Floor, Eden Plaza, Eden Island, Mahe, Seychelles (Business registration number: 214200)</p>
+        </div>
+        <div class="li tow four">
+          <img src="../images/bannerFour.png" alt="旗帜" />
+          <h3>
+            ROCKFORT INTERNATIONAL
+            <br />（Canada） LIMITED
+          </h3>
+          <p>
+            Is a limited liability company located in Canada 1108-250 CONSUMERS ROAD TORONTO (Business registration number: 1181111-8)
+            <br />It is a company that provides MSB (Money Services Business) services regulated by FINTRAC (supervision number M20696230)
+          </p>
+        </div>
+      </div>
+      <div class="why">
+        <h3>Why choose Rockfort?</h3>
+        <div class="ul">
+          <div class="li">
+            <div class="icon">
+              <img src="../images/why1.png" alt="icon" />
+            </div>
+            <p>More trading opportunities</p>
+          </div>
+          <div class="li">
+            <div class="icon">
+              <img src="../images/why2.png" alt="icon" />
+            </div>
+            <p>Safe funding</p>
+          </div>
+          <div class="li">
+            <div class="icon">
+              <img src="../images/why3.png" alt="icon" />
+            </div>
+            <p>Cheap transaction costs</p>
+          </div>
+          <div class="li">
+            <div class="icon">
+              <img src="../images/why4.png" alt="icon" />
+            </div>
+            <p>Efficient use of funds</p>
+          </div>
+          <div class="li">
+            <div class="icon">
+              <img src="../images/why5.png" alt="icon" />
+            </div>
+            <p>Strict global regulation</p>
+          </div>
+          <div class="li" @click="jumpUnderstand()">
+            <div class="icon">
+              <img src="../images/why6.png" alt="icon" />
+            </div>
+            <p>see more</p>
+          </div>
+        </div>
+      </div>
+      <div class="computer">
+        <img src="../images/computer.png" alt />
+        <div class="text">Support transaction query records</div>
+        <div class="text">Simple page and easy operation</div>
+        <div class="text">Support MQL4 programmatic Expert Advisor</div>
+        <div class="text">Support the addition of custom indicators</div>
+        <div class="text">Rich order execution</div>
+        <div class="text">System stability</div>
+      </div>
+      <div class="home">
+        <h3>Global elite management team</h3>
+        <div class="itemUl">
+          <div class="li">
+            <img src="../images/prople.png" alt="人像" />
+            <h4>
+              Sargon Elias
+              <br />
+              <span>CEO</span>
+            </h4>
+            <p>Rockfort Markets</p>
+          </div>
+          <div class="li">
+            <img src="../images/prople.png" alt="人像" />
+            <h4>
+              Nobutaka Hirose
+              <br />
+              <span>CEO</span>
+            </h4>
+            <p>
+              Rockfort International
+              <br />(Seychelles)
+            </p>
+          </div>
+          <div class="li">
+            <img src="../images/prople.png" alt="人像" />
+            <h4>
+              Robert ELdbron
+              <br />
+              <span>CEO</span>
+            </h4>
+            <p>
+              Rockfort International
+              <br />(Canada)
+            </p>
+          </div>
+          <div class="li">
+            <img src="../images/prople.png" alt="人像" />
+            <h4>Hayden Bell</h4>
+            <p>
+              Marketing
+              <br />（Rockfort Markets）
+            </p>
+          </div>
+          <div class="li">
+            <img src="../images/prople.png" alt="人像" />
+            <h4>Matt Larsen</h4>
+            <p>
+              Finance
+              <br />（Rockfort Markets）
+            </p>
+          </div>
+          <div class="li">
+            <img src="../images/prople.png" alt="人像" />
+            <h4>Alex Kowalski</h4>
+            <p>
+              Risk
+              <br />（Rockfort Markets）
+            </p>
+          </div>
+          <div class="li">
+            <img src="../images/prople.png" alt="人像" />
+            <h4>Tony Ke</h4>
+            <p>
+              IT
+              <br />（Rockfort Group）
+            </p>
+          </div>
+          <div class="li">
+            <img src="../images/prople.png" alt="人像" />
+            <h4>Npra AI</h4>
+            <p>
+              Customer Support
+              <br />（Rockfort Markets）
+            </p>
+          </div>
+          <div class="li">
+            <img src="../images/prople.png" alt="人像" />
+            <h4>Ricardo Garrido</h4>
+            <p>
+              Sales
+              <br />（Rockfort Markets）
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="mode">
+      <h3>Cooperation model</h3>
+      <div class="ul">
+        <div class="li">
+          <img src="../images/mode1.png" alt="模式" />
+          <p>Institutional trader</p>
+        </div>
+        <div class="li">
+          <img src="../images/mode2.png" alt="模式" />
+          <p>Fund manager</p>
+        </div>
+        <div class="li">
+          <img src="../images/mode3.png" alt="模式" />
+          <p>White Label Program</p>
+        </div>
+        <div class="li">
+          <img src="../images/mode4.png" alt="模式" />
+          <p>Introduce broker</p>
+        </div>
+      </div>
+    </div>
+    <div class="partner">
+      <h3>Partner</h3>
+      <div class="partnerUl">
+        <div>
+          <img src="../images/partner1.png" alt="伙伴图片" />
+        </div>
+        <div>
+          <img src="../images/partner2.png" alt="伙伴图片" />
+        </div>
+        <div>
+          <img src="../images/partner3.png" alt="伙伴图片" />
+        </div>
+        <div>
+          <img src="../images/partner4.png" alt="伙伴图片" />
+        </div>
+        <div>
+          <img src="../images/partner5.png" alt="伙伴图片" />
+        </div>
+        <div>
+          <img src="../images/partner6.png" alt="伙伴图片" />
+        </div>
+        <div>
+          <img src="../images/partner7.png" alt="伙伴图片" />
+        </div>
+        <div>
+          <img src="../images/partner8.png" alt="伙伴图片" />
+        </div>
+        <div>
+          <img src="../images/partner9.png" alt="伙伴图片" />
+        </div>
+        <div>
+          <img src="../images/partner10.png" alt="伙伴图片" />
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -284,8 +545,20 @@ export default {
           img: "../images/homeActivity.png",
           text: "一文读懂MAM账户，PAMM账 户和单账户的区别"
         }
-      ]
+      ],
+      Switch: true
     };
+  },
+  computed: {
+    getSwitch() {
+      return this.$store.state.Switch;
+    }
+  },
+  watch: {
+    getSwitch(val) {
+      console.log(this.$store.state.Switch);
+      this.Switch = val;
+    }
   },
   created() {
     let that = this;
@@ -302,7 +575,6 @@ export default {
       },
       error: function() {} // 请求失败的回调函数
     });
-
   },
   methods: {
     jump(id) {
@@ -440,11 +712,10 @@ export default {
       .li {
         position: relative;
         width: 42rem;
-        height: 9rem;
         margin: 0 auto;
         border-radius: 1rem;
         box-shadow: 0px 0px 18px 1px #ccc;
-        padding: 1px;
+        padding: 1rem;
         margin-bottom: 2rem;
         img {
           width: 11.18rem;
@@ -470,7 +741,7 @@ export default {
         }
       }
       .two {
-        height: 12.95rem;
+        padding: 1rem;
         img {
           top: -1.13rem;
           right: -2.99rem;
@@ -484,10 +755,10 @@ export default {
         }
       }
       .three {
-        height: 12.95rem;
+        padding: 1rem;
       }
       .four {
-        height: 17.8rem;
+        padding: 1rem;
         img {
           top: -1.13rem;
           right: -2.99rem;
@@ -604,6 +875,7 @@ export default {
   .home {
     background: url("../images/tangle3.png");
     color: #000;
+    padding: 1px;
     h3 {
       font-size: 2.06rem;
       text-align: center;

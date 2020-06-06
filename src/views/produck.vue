@@ -1,5 +1,5 @@
 <template>
-  <div class="Understand">
+  <div v-if="Switch" class="produck">
     <div class="contBg">
       <div class="box" v-if="primary===1||!primary">
         <div class="title">什么是差价合约交易？</div>
@@ -195,6 +195,201 @@
       </div>
     </div>
   </div>
+  <div v-else class="produck">
+    <div class="contBg">
+      <div class="box" v-if="primary===1||!primary">
+        <div class="title">What is CFD trading?</div>
+        <p class="content">
+          Contract for Difference (CFD) is a form of derivatives trading. You can earn potential net gains by buying and selling CFDs by predicting the price changes of rapidly changing global financial markets (or products) such as stocks, stock indexes, foreign exchange and bonds. profit. Contract for Difference (CFD) transactions do not require buying or selling stocks, currencies, or futures to participate in equity, foreign exchange, index, and commodity market transactions.</p>
+        <div class="title">What is CFD trading?</div>
+        <h3 class="subtitle">Advantage 1 &nbsp;&nbsp;Margin trading is possible</h3>
+        <p
+          class="content"
+        >CFDs can trade positions that are much larger than standard trades. This is because Contract for Difference (CFD) provides leverage and does not require payment of the entire amount to negotiate a larger asset. This means occupying more market share with less initial capital. In other words, investors only need to top up the required margin of the transaction amount, and the remaining funds will be provided by the broker</p>
+        <h3 class="subtitle">Advantage 2 &nbsp;&nbsp;Bull and bear markets are investment opportunities</h3>
+        <p class="content">It can be traded in both rising and falling markets: think that the price will fall and you can go short (sell); if you think the price will go up, you can go long (buy). CFDs can also be used to hedge existing physical portfolios.</p>
+        <h3 class="subtitle">Advantage 3 &nbsp;&nbsp;Risk hedging</h3>
+        <p class="content">
+          The use of CFDs can hedge the risk of other open investment assets. If you think that an asset in the portfolio may experience a decline in value, you can short the CFD to offset some of the potential losses.
+          <br />In addition to the CFD CFD itself, CFD trading involves more content.
+        </p>
+        <h3 class="subtitle">Advantage 4 &nbsp;&nbsp;Low threshold access to multiple financial markets</h3>
+        <p
+          class="content"
+        >The CFD trading provided by Rockfort covers a series of global financial markets such as stocks, indices, currencies, commodities, and cryptocurrencies. There are a wide variety of markets, including some markets that are more difficult to enter, such as: NASDAQ, NYSE, HKEx, London Exchange, Australian Exchange and other markets.</p>
+        <h3 class="subtitle">Advantage 5 &nbsp;&nbsp;All operations only need to be performed on one platform</h3>
+        <p class="content">Through CFD trading, investors only need to open an account with Rockfort, and can easily trade with the price changes of stocks, commodities, indices, foreign exchange and cryptocurrencies. One platform is readily available.</p>
+      </div>
+      <div class="box" v-if="primary===2">
+        <div class="title">Spreads on CFDs</div>
+        <p class="content">
+          When trading CFDs, there will be a buying price and a selling price. The buying price is usually slightly higher than the basic market price, and the selling price is usually slightly lower than the basic market price. The difference between the buying price and the selling price is the spread. Spread is the cost of trading CFDs. The smaller the spread, the lower the transaction cost.
+          <br />* Bid price: the price of a new long CFD, or the price of clearing a short CFD
+          <br />* Selling price: the price of a new short CFD or the price of a settlement long CFD
+        </p>
+        <div class="title">Compared with traditional trading, CFD trading has many advantages</div>
+        <p
+          class="content"
+        >Normally, the transaction cost of CFDs provided by Rockfort is spread, but if the contract being traded enters the market directly, Rockfort will charge a commission based on the total amount of the established transaction. For example, in Rockfort trading ECN account type CFDs, since the transaction spread starts from 0, the investor trades directly through the direct access to the interbank liquidity trading system. At this time, the investor's transaction cost includes commissions in addition to the ECN spread. .</p>
+        <div class="title">Contract size of CFD</div>
+        <p
+          class="content"
+        >Rockfort provides standardized contracts (lots) and contracts for differences (CFD) transactions. The transaction scale of standardized contracts varies according to different transaction targets. For example, trading 1 lot of Euro/One dollar is equivalent to trading 100,000 euros. One lot of silver is equivalent to trading 5000 ounces. 1 lot of Apple, equivalent to trading XX shares</p>
+        <div class="title">Position holding time and overnight financing fees</div>
+        <p class="content">
+          There is no fixed expiry date for CFD transactions, and settlement is achieved through transactions and transactions in the opposite direction when opening a position.
+          <br />If the daily closing time (usually 17:00 US Eastern Time, but depending on the target market will be different), still holding a CFD position, investors need to pay overnight financing fees. The collection of financing fees depends on the total amount of funds provided by Rockfort when providing investors with leveraged transactions.
+        </p>
+        <div class="title">CFD trading gains and losses</div>
+        <p class="content">
+         Profit and loss of CFD trading = total number of contracts X value of contract X (closing price – opening price) – commission – overnight financing fee
+          Example: (The following calculation example needs to be modified after the actual MT5 setting is completed)
+        </p>
+        <img src="../images/produckTwo.png" style="width:100%" alt="excel" />
+      </div>
+      <div class="box" v-if="primary===3">
+        <div class="title">What is a stock CFD</div>
+        <p
+          class="content">
+          In addition to buying stocks on the stock exchange, you can also trade through stock CFDs. Traders can purchase CFDs for specific equity, and speculative asset prices change without actually holding the underlying asset. CFDs are financial derivatives, and brokers pay investors the price difference between opening and closing positions. Investors create long positions in the bullish market or short positions in the bearish market, and obtain profits through speculative price changes. The average holding time of CFDs is shorter, so they are considered short-term investments.</p>
+        <div class="title">CFD and traditional trading comparison</div>
+        <img src="../images/produckThree.png" style="width:100%" alt="excel" />
+        <p class="content">
+          When trading CFDs on stocks, only a small part of the initial value of the transaction (that is, margin) is required, which means that you can create equal positions in the stock market with less money. When buying traditional stocks, you need to pay all asset value fees in advance. Regardless of the trading method used, the market share is the same. Leverage is the possibility of expanding profits while increasing the risk of loss.
+          <br />The costs associated with stock CFDs and stock trading are also different. There is no commission or only a very low commission for trading CFDs. The only items of expenditure are the price difference and overnight positions. However, when trading traditional stocks, different brokers will charge different commissions, as well as stamp duties on securities.
+        </p>
+        <div class="title">Advantages of stock CFDs</div>
+        <img src="../images/produckThree2.png" style="width:100%" alt="excel" />
+        <div class="title">Calculation method of stock CFD</div>
+        <p class="content">
+          The transaction cost of stock CFD trading:
+          <br />Margin: usually 5%~20% leverage
+          <br />Number of shares X Stock price (middle price) X Leverage
+          <br />Overnight financing fee: (1-month interbank rate BBSW+ 2.5%) X (number of shares X price)/360
+          <br />Commission: position value X commission ratio (or minimum commission, relatively high value)
+          <br />0.08%~ minimum N USD
+          <br />Examples:
+          <br />
+          <img src="../images/produckThree3.png" style="width:100%" alt="excel" />
+        </p>
+      </div>
+      <div class="box" v-if="primary===4">
+        <div class="title">What is a stock index CFD</div>
+        <p
+          class="content">
+          The stock market index is part of the stock market. The stock index is calculated from a representative set of stocks. Used to express the performance of a country's economy or the operation of a particular industry or exchange. For example, the JPN225 index consists of 225 Japanese companies, so the index tracks the Japanese stock market. Stock indexes are used by investors and economists to compare returns on different assets and track the overall economy. The index has high liquidity, clear chart shape, and small spreads. It is an ideal investment tool.</p>
+        <div class="title">Calculation method of stock index</div>
+        <p class="content">There are usually market value weighting method, price weighting method, equal weighting method and basic weighting method. One of the most commonly used is the market value weighting method.</p>
+        <div class="title">Main reasons affecting stock index valuation</div>
+        <p class="content">
+          1 The price of the constituent stocks of the index;
+          <br />2 Economic data;
+          <br />3 Changes in political policy.
+        </p>
+        <div class="title">The reasons why investors choose stock indexes as investment tools include:</div>
+        <p class="content">
+          1. Large transaction volume and high transparency
+          <br />2. High liquidity, small spread, and clear trend pattern
+          <br />3. Increased volatility due to changes in economic conditions and huge trading opportunities
+          <br />4. Different countries and different industries have different indexes, and investors can easily find products that meet their preferences
+          <br />5. You can seize market opportunities by predicting the rise and fall of the index, buying or selling the index CDF
+        </p>
+      </div>
+      <div class="box" v-if="primary===5">
+        <div class="title">What is a foreign exchange margin contract</div>
+        <p class="content">
+          Foreign exchange margin trading is also called deposit trading. It refers to a method of spot or forward foreign exchange trading between financial institutions and between financial institutions and individual investors. When conducting a margin transaction, the trader only needs to deposit 0.25%-20% of the deposit (margin) to conduct a 100% transaction. That is, traders who pay a certain percentage of the deposit can buy and sell a certain amount of foreign exchange according to the financing multiple provided by the brokerage firm. Make a profit from rising or falling prices, but also bear the risk of loss.
+          <br />Foreign exchange is currently the world's largest financial trading market, and is also considered to be the most free, fair and advanced trading market. Through foreign exchange margin trading, investors can use smaller funds to achieve high profitability and high capital utilization, which is an important reason for investors to choose foreign exchange margin trading.
+        </p>
+        <div class="title">Why trade forex margin trading</div>
+        <h3 class="subtitle">Global market</h3>
+        <p
+          class="content"
+        >Participants in the foreign exchange market include large and small banks, central banks, financial institutions, import and export traders, investment departments of companies, fund companies, and individuals from various countries. 100 million US dollars, far exceeding the stock market trading volume. The huge market size and participants have led to a high degree of transparency and fairness in the market.</p>
+        <h3 class="subtitle">Rich currency</h3>
+        <p class="content">All convertible currencies in the world can be used as trading varieties.</p>
+        <h3 class="subtitle">Mainstream trading currency concentration</h3>
+        <p
+          class="content"
+        >外汇市场的交易集中在七大国家或地区（美国，欧洲，日本，英国，澳大利亚，加拿大）的货币。全球交易量最大的货币对有：欧元/美元、英镑/美元、澳元/美元、美元/日元、英镑/日元、美元/加元。</p>
+        <h3 class="subtitle">24X5交易</h3>
+        <p class="content">从周一到周五，每天24小时连续交易，便于随时进出，避免了隔日跳空带来的风险，即使日内遇定期发布的消息也会有跳空出现，但可以通过预设单或空仓来回避。</p>
+        <h3 class="subtitle">双向交易，操作灵活</h3>
+        <p class="content">可先买后卖，亦可先卖后买，并且买卖币种不限(这是与实盘的一个重要区别)，当然也是T+0，日内可反复做短线。</p>
+        <h3 class="subtitle">杠杆效应</h3>
+        <p
+          class="content"
+        >Since margin trading is a leveraged transaction, participants only pay a small percentage of the margin, so that the normal fluctuations in foreign exchange prices are magnified several times or even tens of times, the use efficiency of funds is improved, and high risks are faced while obtaining high returns. .</p>
+        <h3 class="subtitle">Controllable transaction costs</h3>
+        <p class="content">For foreign exchange margin trading, the spread fee charged by Rockfort starts from 0</p>
+        <div class="title">Calculation method of foreign exchange margin contract</div>
+        <img src="../images/produckFive.png" style="width:100%" alt="excel" />
+      </div>
+      <div class="box" v-if="primary===6">
+        <div class="title">What are the common crude oil CFD products?</div>
+        <p class="content">
+          Common crude oil CFD products are North American crude oil and Brent crude oil.
+          <br />Brent crude oil is a kind of North Sea crude oil. It is traded in the London commodity futures market, also known as ICEBrent. At present, except for some Middle East and Far East crude oil, most of the crude oil in the world (such as North Sea, Africa, Latin America , Canada, and parts of the Middle East and Far East regions when exporting crude oil to Europe) are priced using Brent crude oil as the pricing standard.
+          <br />WTI crude oil is U.S. crude oil. All crude oil produced in or sold to the United States is based on light and low sulfur WTI. Trading on the New York Commodity Futures Exchange is an important part of the world's crude oil pricing system, but it is only priced against US domestic crude oil and is highly localized. The United States, as a major consumer of crude oil, coupled with the global influence of the New York Futures Exchange, crude oil futures trading with WTI as the benchmark oil has become the leader in trading volume among global commodity futures varieties.
+          <br />In short, WTI crude oil, the US market, determines the benchmark oil for futures pricing based on oil futures contracts traded on the CME New York Mercantile Exchange; Brent crude oil, which is mainly used in Europe and traded on the Intercontinental Exchange (ICE) International benchmarks determine prices and are the benchmark oil in the spot market.
+        </p>
+        <div class="title">What are the factors that affect crude oil prices?</div>
+        <h3 class="subtitle">Macroeconomic factors</h3>
+        <p class="content">
+          Supply: includes crude oil resources that can be actually extracted from land or sea, and oil reserves, including the number of barrels of oil that can be produced at economically advantageous prices daily, weekly, or monthly.
+          <br />Demand: Rely on oil supply and by-products to sustain global economic growth, and use alternative energy sources such as wind, hydropower, and solar energy.
+        </p>
+        <h3 class="subtitle">Relationships among major players in the oil market</h3>
+        <p class="content">
+          Production agreement between major oil producers regarding the quantity of oil produced.
+          <br />The imposition (or cancellation) of political or economic sanctions on oil exporting countries such as the Middle East, Iran, Venezuela, Qatar, or Russia may result in fluctuations in global oil prices and other commodity futures prices.
+        </p>
+        <h3 class="subtitle">Speculation and trading sentiment</h3>
+        <p
+          class="content"
+        >Trading oil through futures contracts is considered a common form of trading. Due to a large number of market speculators-central banks, investment banks, financial institutions, brokerage companies, individual investors, intra-day traders, etc., this activity can strengthen or reverse the momentum of oil prices.</p>
+        <div class="title">Calculation method of crude oil CFD contract</div>
+        <img src="../images/produckSix.png" style="width:100%" alt="excel" />
+      </div>
+      <div class="box" v-if="primary===7">
+        <div class="title">What are the most traded precious metals</div>
+        <p class="content">
+          As a highly conductive and ductile metal, gold does not react with other elements and is widely used in industrial and commercial applications. In addition, gold has always been a symbol of wealth in the long river of history. Since prehistoric times, gold has been used for exchange, and the first gold coin was discovered in 600 BC. To this day, gold is still a solid investment-preserving asset.
+          <br />Like gold, silver continued into the nineteenth century. Industrial, commercial and consumer demand make silver a powerful asset for investment. For more than 4000 years, silver has also been used for currency exchange, and derivatives such as silver futures are traded on different exchange markets around the world.
+        </p>
+        <div class="title">What are the factors that affect the price of gold</div>
+        <p class="content">Unlike most commodities that depend on production and consumption levels, the trading price of gold and silver closely follows the pulse of political changes, and investors regard it as a safe-haven market when the market is unstable and a reserve for asset value.</p>
+        <h3 class="subtitle">Gold Supply and Demand</h3>
+        <p
+          class="content"
+        >Gold mine mining volume, central bank reserves sell-off volume and old gold recovery volume. For example, the market is worried about the prospects of the US dollar and the demand for gold has increased, but at the same time the mining volume of gold mines has fallen.</p>
+        <h3 class="subtitle">Global central bank</h3>
+        <p class="content">Global central banks are large holders of gold, and the central bank's gold holdings directly affect gold price fluctuations. If the central bank continues to absorb or increase its gold holdings, the price of gold will rise. If the central bank sells gold, the price of gold will go down;</p>
+        <h3 class="subtitle">Stock market</h3>
+        <p
+          class="content"
+        >Historically, the price of gold and the economy and stocks have diverged. When the stock market is bullish, the stock price rises and gold investment is taken away, causing the gold price to fall. When the stock market is bearish, the stock price is weak, and investors will switch to investing in gold, causing the price of gold to rise;</p>
+        <h3 class="subtitle">Crude oil prices</h3>
+        <p class="content">The characteristics of gold when fighting inflation. The price of crude oil is closely related to inflation. Therefore, there is a strong positive correlation between the price of gold and the price of crude oil. The rise in crude oil prices usually means the arrival of inflation, and the price of gold also rises at the same time.</p>
+        <h3 class="subtitle">Dollar trend</h3>
+        <p class="content">The liquidity of the dollar is better than that of gold, and the stability of gold is better than that of the dollar. When the US dollar strengthens, opportunities for investing in the US dollar increase and gold weakens. When the dollar weakens, the price of gold begins to strengthen.</p>
+        <h3 class="subtitle">War and political situation</h3>
+        <p class="content">When wars and political turmoil occur, the economy will be greatly affected. Any related currency will depreciate due to inflation. People will target gold, causing the price of gold to rise.</p>
+        <h3 class="subtitle">financial crisis</h3>
+        <p class="content">When a country's financial system becomes unstable, the world's funds will be invested in gold, causing the price of gold to rise. Gold now plays the role of capital refuge.</p>
+        <h3 class="subtitle">inflation</h3>
+        <p
+          class="content"
+        >The purchasing power of currency is determined by the price index. When prices are stable, the purchasing power of money is stable. Conversely, the higher the currency rate, the lower the currency purchasing power. When the price index of major countries remained stable, holding cash became the first choice for investors. Conversely, people will choose to buy gold and cause the price of gold to rise. Among them, the US inflation rate is the most likely to affect the movement of gold</p>
+        <h3 class="subtitle">Local interest rate</h3>
+        <p
+          class="content"
+        >When the currency interest rate is low, and the return on investment gold exceeds the return on interest rates, the price of gold will rise. Conversely, when interest rates rise, the interest income of currency will be more attractive. Investing in gold is not as stable and safe as money is charged at the bank, and the investment value of gold will fall. The price of gold will be frustrated.</p>
+        <h3 class="subtitle">Calculation method of precious metal CFD contract</h3>
+        <img src="../images/produckSeven.png" style="width:100%" alt="excel" />
+      </div>
+    </div>
+  </div>
 </template>
 <script src="https://www.rfmhub.com/cn/api/get_recent_posts/"/>
 <script>
@@ -204,18 +399,26 @@ export default {
   data() {
     return {
       datas: [],
-      primary: 0
+      primary: 0,
+      Switch: true
     };
   },
   computed: {
     getPrimary() {
       return this.$store.state.primary;
+    },
+    getSwitch() {
+      return this.$store.state.Switch;
     }
   },
   watch: {
     getPrimary(val) {
       console.log(this.$store.state.primary);
       this.primary = val;
+    },
+    getSwitch(val) {
+      console.log(this.$store.state.Switch);
+      this.Switch = val;
     }
   },
   created() {},
@@ -228,7 +431,7 @@ export default {
 </script>
 <style lang="scss">
 $borColor: rgba(255, 255, 255, 0.1);
-.Understand {
+.produck {
   color: #000;
   text-align: left;
   .contBg {

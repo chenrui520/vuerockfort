@@ -3,7 +3,7 @@
     <div>
       <div class="headerImg" style="position:relative">
         <div class="Mask">
-          <h3 style="z-index:10">{{data.modified}}</h3>
+          <h3 style="z-index:10">{{data.title}}</h3>
           <div class="p">{{data.author.name }}</div>
           <div class="p">{{data.modified}}</div>
           <!-- <p
@@ -90,11 +90,11 @@ $borColor: rgba(255, 255, 255, 0.1);
       }
       p {
         background: url("../images/11.png");
-        width: 62.6%;
-        margin: 0 auto;
+        // width: 62.6%;
+        margin: 10px 40px;
         font-size: 1.049rem;
         line-height: 2em;
-        padding: 1.694rem;
+        padding-top: 1rem;
         margin-top: 2.623rem;
         border: 1px dashed $borColor;
       }

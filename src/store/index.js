@@ -6,7 +6,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     primary:0,
-    Introduction:0
+    Introduction:0,
+    Switch:true
   },
   mutations: {
     setPrimary(state,num){
@@ -14,6 +15,9 @@ export default new Vuex.Store({
     },
     setIntroduction(state,num){
       state.Introduction = num
+    },
+    setSwitch(state,bool){
+      state.Switch = bool
     }
   },
   actions: {

@@ -1,5 +1,5 @@
 <template>
-  <div id="footer">
+  <div v-if="Switch" id="footer">
     <div class="logo">
       <img class="logoImg" src="../images/footerLogo.png" alt="logo" />
       <img class="logoText" src="../images/footerText.png" alt="logo" />
@@ -14,8 +14,27 @@
       <router-link to="/SoftwareDownload">交易软件</router-link>
     </ul>
     <div class="record">
-      <h3>京ICP备15047750号-1</h3>
+      <!-- <h3>京ICP备15047750号-1</h3> -->
       <p>风险警示： 交易外汇和杠杆化金融品种具有高风险，可能导致您损失本金。您所承担的亏损风险不应超过您的承受能力，请确保您完全理解其中所涉风险。交易杠杆化产品并不适合所有投资者。在交易前，请考虑您的经验水平、投资目标，如有必要请寻求独立财务建议。</p>
+    </div>
+  </div>
+  <div v-else id="footer">
+    <div class="logo">
+      <img class="logoImg" src="../images/footerLogo.png" alt="logo" />
+      <img class="logoText" src="../images/footerText.png" alt="logo" />
+    </div>
+    <ul class="nav">
+      <h3>Quick navigation</h3>
+      <router-link to="/">Home</router-link>
+      <router-link to="/Introduction">Group Introduction</router-link>
+      <router-link to="/Understand">Why choose ROCKFOTRT?</router-link>
+      <router-link to="/Supervision">Regulation and safety</router-link>
+      <router-link to="/produck">company's product</router-link>
+      <router-link to="/SoftwareDownload">Trading software</router-link>
+    </ul>
+    <div class="record">
+      <!-- <h3>京ICP备15047750号-1</h3> -->
+      <p>Risk warning: Trading foreign exchange and leveraged financial products have high risks and may cause you to lose principal. The risk of loss you bear should not exceed your ability to bear, please make sure that you fully understand the risks involved. Trading leveraged products is not suitable for all investors. Before trading, please consider your experience level, investment objectives, and seek independent financial advice if necessary.</p>
     </div>
   </div>
 </template>
@@ -92,6 +111,21 @@
 </style>
 <script>
 export default {
-  name: "foot"
+  name: "foot",
+  data(){
+    return {
+      Switch:true
+    }
+  }, computed: {
+    getSwitch() {
+      return this.$store.state.Switch;
+    }
+  },
+  watch: {
+    getSwitch(val) {
+      console.log(this.$store.state.Switch);
+      this.Switch = val;
+    }
+  },
 };
 </script>

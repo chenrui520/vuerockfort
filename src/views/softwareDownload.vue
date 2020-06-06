@@ -1,5 +1,5 @@
 <template>
-  <div class="softwareDownload">
+  <div v-if="Switch" class="softwareDownload">
     <div>
       <div class="headerImg" style="position:relative">
         <div class="Mask">
@@ -50,6 +50,59 @@
       </div>
     </div>
   </div>
+    <div v-else class="softwareDownload">
+    <div>
+      <div class="headerImg" style="position:relative">
+        <div class="Mask">
+          <h3 style="z-index:10">The most popular trading platform and the most powerful trading platform</h3>
+          <p style="z-index:10">
+           MT4 trading software is a software developed by Midak to receive market prices.It has different language settings, provides a variety of foreign exchange trading product types, and can also view market changes in a timely manner, while placing orders and simulating transactions. It is currently the most widely used trading software in the world. It still occupies the dominant position of the mainstream trading platform in the global foreign exchange market.
+            The MT4 software not only provides real-time market information, but also includes 18 various line drawing tools, K-line charts of different periods, and various common technical indicators.In addition, the MT4 software also supports ordering and ping Functions such as positions, stop-loss and stop-loss settings, transaction record query, etc., can help traders analyze data comprehensively and grasp market changes.
+          </p>
+        </div>
+      </div>
+      <div class="cont">
+        <img src="../images/downPc.png" alt="pc" />
+        <div class="text">
+          <h3>Simple interface and easy operation</h3>
+          <p>The interface setting of MT4 is simple, and strives to make the chart clear at a glance, so that the trader can quickly and easily when operating, which is very necessary for novice foreign exchange trading, if the operation is too cumbersome, it will delay more precious time</p>
+        </div>
+      </div>
+      <div class="contTwo">
+        <div class="Mask">
+          <h3>Support transaction record query</h3>
+          <p>Many friends want to view their own records, so that they can summarize their trading experience and improve operational skills.Some software does not support this function, but the MT4 software can support the query of transaction records, which gives many transactions. Provide convenience</p>
+          <h3>Support the addition of custom indicators</h3>
+          <p>Although MT4 trading software supports common technical indicators, because investors' preferences are different, some friends prefer some less common technical indicators, which are not available in the general system, but in MT4 software, you can Adding the technical indicators that you download or write yourself to use, this is a big boon for those friends with strong analytical skills.</p>
+          <h3>Supports programmatic Expert Advisor based on MQL4 language</h3>
+          <p>EA, a syntax similar to C/C++ programming language, is an MT4 platform that provides individual traders and institutional trading. In addition to manual trading, there is also a core function that attracts traders-expert advisor, English literal translation means expert advisor, Commonly known as "intelligent trading", "intelligent trading", "programmed trading". After using the EA, traders can write MQL program files in MT4 according to clear entry and exit strategies, allowing the EA system to automatically trade to open and close positions for 24 hours</p>
+        </div>
+      </div>
+      <div class="contThree">
+        <div class="text">
+          <h3>System stability</h3>
+          <p>
+            When doing foreign exchange, the stability of the system is very important. The trader sends instructions to the server, and then the server sends it to the bank and executes it.The shorter the elapsed time in this process, the more precise the point of transaction execution. Especially during the trading, due to the fierce market fluctuations, the time error caused by the stability of the system can bring a relatively large loss to the transaction, so the stability of the MT4 system is also a guarantee of quality
+            </p>
+        </div>
+        <img src="../images/downChart.png" alt="pc" />
+      </div>
+      <div class="contFour">
+        <div class="Mask">
+          <h3>Rich order execution</h3>
+          <p>
+           Market orders: Use market orders to open or close trades at the current market price.
+            <br />Pending Orders: Sell at the market price based on the price higher than the current price, or buy the market at the specified price below the current market price.
+            <br />Stop-loss pending orders: buy and enter at a price higher than the current price, or sell and enter the market at a specified price lower than the current market price.
+            <br />Take profit orders: only set the target price in advance, when you touch this price, the platform will automatically close your position and lock the trading profit.
+            <br />Stop loss order: Specify a price in advance. When the market trend is unfavorable to the transaction, the system will settle the transaction at this price to lock in the loss.
+            <br />Mobile Stop Loss Orders: Mobile Stop Loss Orders track the direction of price changes that are beneficial to you and maintain the initial price difference between the stop loss price and the current price.
+            <br />Partially close positions: Partially close existing positions. For example, if you hold 4 lots of Alibaba CFD positions, you can close some of the positions, keep some positions, and wait for more profits
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -58,9 +111,21 @@ export default {
   components: {},
   data() {
     return {
-      hoverFn: false
+      hoverFn: false,
+      Switch:true
     };
-  }
+  },
+  computed: {
+    getSwitch() {
+      return this.$store.state.Switch;
+    }
+  },
+  watch: {
+    getSwitch(val) {
+      console.log(this.$store.state.Switch);
+      this.Switch = val;
+    }
+  },
 };
 </script>
 <style lang="scss">

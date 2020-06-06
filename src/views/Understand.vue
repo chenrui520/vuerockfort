@@ -1,5 +1,5 @@
 <template>
-  <div class="Understand">
+  <div v-if="Switch" class="Understand">
     <div class="contBg">
       <div class="title">
         <h3>更多的交易机会</h3>
@@ -64,6 +64,71 @@
       </div>
     </div>
   </div>
+  <div v-else class="Understand">
+    <div class="contBg">
+      <div class="title">
+        <h3>More trading opportunities</h3>
+      </div>
+      <div class="p">
+        Rockfort provides electronic trading products including global foreign exchange, stocks, stock indexes, options,
+        Futures and other CFD products include online transaction execution and settlement of a wide variety of electronic trading products in 125 trading centers worldwide.
+      </div>
+      <div class="title">
+        <h3>Safe funding</h3>
+      </div>
+      <div class="p">
+        1. All customer funds are deposited in segregated bank accounts and segregated fund accounts of liquidity providers.
+        <br />2. All customer funds are distributed and stored in major global banks, and are subject to Rockfort risk regulations and compliance supervision.
+        <br />3.Rockfort uses the group's own funds for hedging transactions and does not use customer funds.
+        <br />4.Rockfort is regulated in countries with high transparency and stability in global financial politics, Canada and New Zealand.
+        <br />5.Rockfort accepts external audits by the world's authoritative accounting and auditing companies Wing On EY and Deloitte Deloitte.
+        <br />6.Rockfort is legally advised by German law firm Dentons
+      </div>
+      <div class="title">
+        <h3>Cheap transaction costs</h3>
+      </div>
+      <div class="p">
+        Rockfort provides stable spreads and handling fees with global competitiveness. All our products provide very competitive spreads,
+        Including European and American spreads 0, Apple and Alibaba and other major stocks spread to X.
+      </div>
+      <div class="title">
+        <h3>Efficient use of funds</h3>
+      </div>
+      <div class="p">Foreign exchange margin leverage ratio is up to 500 times, stocks X times.</div>
+      <div class="title">
+        <h3>Strict global regulation</h3>
+      </div>
+      <div class="p">
+        Rockfort Markets is licensed by FMA Derivatives Issuers,
+        One of the only eight financial service providers in New Zealand that has a derivative issuer license. FSP number: FSP509766
+        <br />Rockfort Internations obtained the Canadian broker's MSB number: M20696230
+      </div>
+      <div class="title">
+        <h3>The most popular trading platform and the most powerful trading platform</h3>
+      </div>
+      <div class="p">
+        MT4 trading software is a software developed by Midak to receive quotes,
+        There are different language settings, providing a variety of foreign exchange trading product types, and you can also view market changes in a timely manner.
+        Simultaneous order placement and simulated trading are currently the most widely used trading software in the world. It still occupies the dominant position of the mainstream trading platform in the global foreign exchange market.
+        <br />MT4 software not only provides real-time market information, but also includes 18 kinds of line drawing tools, K-line charts of different periods,
+        As well as various common technical indicators, in addition, MT4 software also supports functions such as order placement, position closing, stop loss and profit setting, transaction record query, etc.
+        Can help traders to analyze the data in an all-round way and master the market changes.
+      </div>
+      <div class="title">
+        <h3>Rich order execution</h3>
+      </div>
+      <div class="p">
+        There are multiple order execution methods on the Rockfort trading platform
+        <br />Market orders: Use market orders to open or close trades at the current market price.
+        <br />Pending Orders: Sell at the market price based on the price higher than the current price, or buy the market at the specified price below the current market price.
+        <br />Stop-loss pending orders: buy and enter at a price higher than the current price, or sell and enter the market at a specified price lower than the current market price.
+        <br />Take profit orders: only set the target price in advance, when you touch this price, the platform will automatically close your position and lock the trading profit.
+        <br />Stop loss order: Specify a price in advance. When the market trend is unfavorable to the transaction, the system will settle the transaction at this price to lock in the loss.
+        <br />Mobile Stop Loss Orders: Mobile Stop Loss Orders track the direction of price changes that are beneficial to you and maintain the initial price difference between the stop loss price and the current price.
+        <br />Partially close positions: Partially close existing positions. For example, if you hold 4 lots of Alibaba CFD positions, you can close some of the positions, keep some positions, and wait for more profits
+      </div>
+    </div>
+  </div>
 </template>
 <script src="https://www.rfmhub.com/cn/api/get_recent_posts/"/>
 <script>
@@ -72,8 +137,20 @@ export default {
   components: {},
   data() {
     return {
-      datas: []
+      datas: [],
+      Switch: true
     };
+  },
+  computed: {
+    getSwitch() {
+      return this.$store.state.Switch;
+    }
+  },
+  watch: {
+    getSwitch(val) {
+      console.log(this.$store.state.Switch);
+      this.Switch = val;
+    }
   },
   created() {},
   methods: {
