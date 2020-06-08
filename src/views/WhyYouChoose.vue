@@ -31,6 +31,8 @@ export default {
     };
   },
   created (){
+    this.Switch = this.$store.state.Switch;
+
     let that = this   
     this.AJAX.ajax({ 
      url: 'https://www.rfmhub.com/cn/api/',  // 请求地址

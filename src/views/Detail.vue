@@ -63,7 +63,7 @@ $borColor: rgba(255, 255, 255, 0.1);
 .detail {
   color: #fff;
   .headerImg {
-    height: 43.099rem;
+    height: 25rem;
     margin-top: -4.76rem;
     background: url("../images/detail.png");
     background-size: cover;
@@ -95,7 +95,7 @@ $borColor: rgba(255, 255, 255, 0.1);
         font-size: 1.049rem;
         line-height: 2em;
         padding-top: 1rem;
-        margin-top: 2.623rem;
+        // margin-top: 2.623rem;
         border: 1px dashed $borColor;
       }
     }

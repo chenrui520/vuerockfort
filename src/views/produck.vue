@@ -421,7 +421,10 @@ export default {
       this.Switch = val;
     }
   },
-  created() {},
+  created() {
+    this.Switch = this.$store.state.Switch;
+
+  },
   methods: {
     jump(id) {
       this.$router.push({ path: "/Detail", query: { id } });

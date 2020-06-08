@@ -556,12 +556,12 @@ export default {
   },
   watch: {
     getSwitch(val) {
-      console.log(this.$store.state.Switch);
       this.Switch = val;
     }
   },
   created() {
     let that = this;
+    this.Switch = this.$store.state.Switch;
     this.AJAX.ajax({
       url: "https://www.rfmhub.com/cn/api/", // 请求地址
       jsonp: "jsonpCallback", // 采用jsonp请求，且回调函数名为"jsonpCallbak"，可以设置为合法的字符串

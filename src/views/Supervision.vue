@@ -228,6 +228,10 @@ export default {
       console.log(this.$store.state.Switch);
       this.Switch = val;
     }
+  },
+  created(){
+    this.Switch = this.$store.state.Switch;
+
   }
 };
 </script>

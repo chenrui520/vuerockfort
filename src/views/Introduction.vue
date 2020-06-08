@@ -39,6 +39,10 @@ export default {
       this.Switch = val;
     }
   },
+  created(){
+    this.Switch = this.$store.state.Switch;
+
+  }
 };
 </script>
 <style lang="scss">
